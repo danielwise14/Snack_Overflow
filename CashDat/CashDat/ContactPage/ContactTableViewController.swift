@@ -41,6 +41,8 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
         
         cell.cellNameLabel.text = testNameArray[indexPath.row]
         cell.cellBalanceLabel.text = String(testBalanceArray[indexPath.row])
+        cell.cellEmail = testNameArray[indexPath.row]
+        
         if testBalanceArray[indexPath.row] > 0{
             cell.cellBackground.backgroundColor = UIColor(red:0.62, green:1.00, blue:0.73, alpha:1.0)
         }
@@ -54,22 +56,33 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    var nameToPass: String = ""
+    var balanceToPass: String = ""
+    var emailToPass: String = ""
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("check1")
         let cell = tableView.cellForRow(at: indexPath) as! ContactCell
-        let nameToPass = cell.cellNameLabel.text
-        let balanceToPass = cell.cellBalanceLabel.text
-        func prepare(for segue: UIStoryboardSegue, sender: Any?){
-            if segue.identifier == "contactToDetail" {
-                let destinationVC = segue.destination as! ContactDetailViewController
-                print(nameToPass)
-                print(balanceToPass)
-                destinationVC.namePassed = nameToPass!
-                destinationVC.balancePassed = balanceToPass!
-            }
-        }
-        performSegue(withIdentifier: "contactToDetail", sender: cell)
+        self.nameToPass = cell.cellNameLabel.text!
+        self.balanceToPass = cell.cellBalanceLabel.text!
+        self.emailToPass = cell.cellEmail
+        
+        performSegue(withIdentifier: "contactToDetail", sender: self)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    //TODO: Segue to detail page, carrying data over
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "contactToDetail" {
+            let destVC = segue.destination as! ContactDetailViewController
+            destVC.name=self.nameToPass
+            destVC.email=self.emailToPass
+            destVC.balance=self.balanceToPass
+        }
+    }
+
         //TODO: Segue to detail page, carrying data over
 }
     /*

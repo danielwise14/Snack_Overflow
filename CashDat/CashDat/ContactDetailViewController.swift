@@ -9,8 +9,9 @@ import UIKit
 
 class ContactDetailViewController: UIViewController {
 
-    var namePassed = ""
-    var balancePassed = ""
+    var name: String = ""
+    var email: String = ""
+    var balance: String = ""
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -19,8 +20,9 @@ class ContactDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = namePassed
-        balanceLabel.text = balancePassed
+        nameLabel.text = name
+        emailLabel.text = email
+        balanceLabel.text = balance
         // Do any additional setup after loading the view.
     }
     
