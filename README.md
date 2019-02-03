@@ -1,6 +1,6 @@
 <img src = "https://github.com/danielwise14/Snack_Overflow/raw/master/logoside.png" />
 
-##### Team SnackOverflow 🌯
+#### A Team SnackOverflow 🌯 Project
 A simple way to track who owes you money, and who you owe when you pay for one another, then request to get paid!
 <p align="center">
   <img src="https://github.com/danielwise14/Snack_Overflow/raw/master/img1.png">
