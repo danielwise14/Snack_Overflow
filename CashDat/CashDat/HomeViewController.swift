@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     
     
     
+
     @IBAction func logOutAction(_ sender: Any) {
         do {
             try Auth.auth().signOut()
