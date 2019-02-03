@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
+    "importHelpers": true,
+    "module": "commonjs",
+    "outDir": "lib",
+    "rootDir": "src",
+    "strict": true,
+    "target": "es2017",
+    "declaration": false,
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "app/**/*"
+  ]
+}
