@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "*": ["types/*"] },
+    "importHelpers": true,
+    "module": "commonjs",
+    "outDir": "lib",
+    "rootDir": "src",
+    "strict": true,
+    "target": "esnext",
+    "declaration": false,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "app/**/*"
+  ]
+}

@@ -1,0 +1,2 @@
+#!/bin/bash
+export GOOGLE_APPLICATION_CREDENTIALS="/home/harsh/Documents/Hackathons/McHacks6/Snack_Overflow/ocr/CashThat-e4bb7867495f.json"
