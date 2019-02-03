@@ -1,6 +1,6 @@
 import io
 import os
-
+from pprint import pprint
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -15,16 +15,15 @@ from google.cloud.vision import types
 def draw_boxes(response, x_offset, y_offset, img_path=None):
     # Graphing Stuff(can be commented)
     # -------------------------------------------------------
-    # im = np.array(Image.open(img_path), dtype=np.uint8)
-    # # Create figure and axes
-    # fig,ax = plt.subplots(1)
-    # # Display the image
-    # ax.imshow(im, origin='upper')
+    im = np.array(Image.open(img_path), dtype=np.uint8)
+    # Create figure and axes
+    fig,ax = plt.subplots(1)
+    # Display the image
+    ax.imshow(im, origin='upper')
     # -------------------------------------------------------
     items ={}
     price = []
     dot = False
-    print(response)
     for box in response.text_annotations:
         # print(price)
         # Create a Rectangle patch
@@ -47,16 +46,16 @@ def draw_boxes(response, x_offset, y_offset, img_path=None):
                         price.append((box.description))
                     # Graphing
                     # -------------------------------------------------------    
-                    # rect = patches.Rectangle((coords['x'],coords['y']),coords['w'], coords['h'],linewidth=1,edgecolor='r',facecolor='none')
-                    # # Add the patch to the Axes
-                    # ax.add_patch(rect)
+                    rect = patches.Rectangle((coords['x'],coords['y']),coords['w'], coords['h'],linewidth=1,edgecolor='r',facecolor='none')
+                    # Add the patch to the Axes
+                    ax.add_patch(rect)
                     # -------------------------------------------------------
             else:
                 # Graphing
                 # -------------------------------------------------------
-                # rect = patches.Rectangle((coords['x'],coords['y']),coords['w'], coords['h'],linewidth=1,edgecolor='g',facecolor='none')
-                # # Add the patch to the Axes
-                # ax.add_patch(rect)
+                rect = patches.Rectangle((coords['x'],coords['y']),coords['w'], coords['h'],linewidth=1,edgecolor='g',facecolor='none')
+                # Add the patch to the Axes
+                ax.add_patch(rect)
                 # -------------------------------------------------------
                 pass
     # print(items)
@@ -81,7 +80,7 @@ def draw_boxes(response, x_offset, y_offset, img_path=None):
     # print(final)
     # Graphing
     # -------------------------------------------------------
-    # plt.show()
+    plt.show()
     # -------------------------------------------------------
     return final
     # return items
@@ -115,27 +114,29 @@ def parse_receipt(x_offset, y_offset, image_url):
     client = vision.ImageAnnotatorClient()
     # URI based web location image
     # ------------------------------------------------
-    image = vision.types.Image()
-    image.source.image_uri = image_url
+    # image = vision.types.Image()
+    # image.source.image_uri = image_url
     # ------------------------------------------------
     # Local
     # ------------------------------------------------
     # The name of the image file to annotate
-    #file_name = os.path.join(
-    #    os.path.dirname(__file__),
-    #    image_url)
+    file_name = os.path.join(
+        os.path.dirname(__file__),
+        image_url)
 
 
     # Loads the image into memory
-    #with io.open(file_name, 'rb') as image_file:
-    #    content = image_file.read()
+    with io.open(file_name, 'rb') as image_file:
+        content = image_file.read()
 
-    #image = types.Image(content=content)
+    image = types.Image(content=content)
     # ------------------------------------------------
 
     # Performs label detection on the image file
     response = client.document_text_detection(image=image)
     # init_conf()
     # draw_boxes(response, 400, [50, 350])
-    # draw_boxes(response, 1800, [750, 1400])
-    return {'items':draw_boxes(response, x_offset, y_offset)}
+    return {'items':draw_boxes(response, x_offset, y_offset, image_url)}
+#items = parse_receipt(1800, [750, 1400], 'example3.jpg')
+items = parse_receipt(400, [50, 350], 'example2.jpg')
+pprint(items)

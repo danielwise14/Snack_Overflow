@@ -20,5 +20,5 @@ def json_example():
     url = req_data['url']
     return jsonify(parse_receipt(x_offset,y_offset,image_url=url))
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5000) #run app in debug mode on port 5000
+#if __name__ == "__main__":
+#    app.run(debug=True, port=5000) #run app in debug mode on port 5000
