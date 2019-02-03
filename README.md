@@ -11,6 +11,10 @@ A simple way to track who owes you money, and who you owe when you pay for one a
 The inspiration for this project was drawn from the daily experiences of our team members. As post-secondary students, we often make purchases for our peers for convenience, yet forget to follow up. This can lead to disagreements and accountability issues. Thus, we came up with the idea of CashDat, to alleviate this commonly faced issue. People will no longer have to remind their friends about paying them back! With the available API’s, we realized that we could create an application to directly tackle this problem. 
 ## What it does?
 CashDat is an application available on the iOS platform that allows users to keep track of who owes them money, as well as who they owe money to. Users are able to scan their receipts, divide the costs with other people, and send requests for e-transfer.
+<p align="center">
+  <img src="https://github.com/danielwise14/Snack_Overflow/raw/master/img5.png">
+ <img src="https://github.com/danielwise14/Snack_Overflow/raw/master/img6.png">
+</p>
 ## How we built it?
 We used Python and Optical Character Recognition (OCR) built inside Google Cloud Vision API to implement text extraction using AI on the cloud. This was used specifically to draw item names and prices from the scanned receipts.
 
