@@ -12,8 +12,8 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
 
     //MARK: IBOutlets
     
+    
     @IBOutlet weak var contactTableView: UITableView!
-    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
     
     
@@ -55,11 +55,23 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
-        //TODO: Segue to detail page, carrying data over
-        
+        let cell = tableView.cellForRow(at: indexPath) as! ContactCell
+        let nameToPass = cell.cellNameLabel.text
+        let balanceToPass = cell.cellBalanceLabel.text
+        func prepare(for segue: UIStoryboardSegue, sender: Any?){
+            if segue.identifier == "contactToDetail" {
+                let destinationVC = segue.destination as! ContactDetailViewController
+                print(nameToPass)
+                print(balanceToPass)
+                destinationVC.namePassed = nameToPass!
+                destinationVC.balancePassed = balanceToPass!
+            }
+        }
+        performSegue(withIdentifier: "contactToDetail", sender: cell)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+        //TODO: Segue to detail page, carrying data over
+}
     /*
     // MARK: - Navigation
 
@@ -70,4 +82,4 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
     }
     */
 
-}
+

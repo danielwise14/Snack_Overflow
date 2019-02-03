@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/danielwise/Desktop/projects/CashDat/CashDat/CashDat/ContactDetailViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:CashDat.xcodeproj">
    </FileRef>
    <FileRef
