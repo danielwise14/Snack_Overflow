@@ -1,35 +1,22 @@
 //
-//  StartViewController.swift
+//  TransactionDetailViewController.swift
 //  CashDat
 //
-//  Created by Daniel Wise on 2019-02-02.
+//  Created by Daniel Wise on 2019-02-03.
 //  Copyright © 2019 SnackOverflow. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class StartViewController: UIViewController {
+class TransactionDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    navigationController?.isNavigationBarHidden = true
+
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func loginButtonPressed(_ sender: Any) {
-    }
-    
-    
-    @IBAction func signupButtonPressed(_ sender: Any) {
-    }
-    
-    override func viewDidAppear(_ animated: Bool){
-        super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
-        }
-    }
+
     /*
     // MARK: - Navigation
 

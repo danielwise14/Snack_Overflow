@@ -39,6 +39,8 @@ class TransactionTableViewController: UIViewController, UITableViewDelegate, UIT
         cell.dateLabel.text = testDateArray[indexPath.row]
         cell.owedLabel.text = String(testIOweArray[indexPath.row])
         cell.payedLabel.text = String(testIPayArray[indexPath.row])
+        
+        return cell
     /*
     // MARK: - Navigation
 
