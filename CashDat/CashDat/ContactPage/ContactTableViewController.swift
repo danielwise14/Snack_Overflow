@@ -21,6 +21,8 @@ class ContactTableViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
+        
         contactTableView.delegate = self
         contactTableView.dataSource = self
         // Do any additional setup after loading the view.

@@ -306,72 +306,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jq3-Aq-YnF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jq3-Aq-YnF">
                                 <rect key="frame" x="0.0" y="64" width="334" height="592"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-X5-875">
-                                <rect key="frame" x="0.0" y="656" width="334" height="80"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="0.0" maxValue="362" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-oT-U9M">
-                                        <rect key="frame" x="-2" y="0.0" width="338" height="41"/>
-                                    </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="0.0" maxValue="362" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-t7-G2i" userLabel="XSlider2">
-                                        <rect key="frame" x="-2" y="40" width="338" height="41"/>
-                                    </slider>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="F6d-t7-G2i" firstAttribute="height" secondItem="lgd-oT-U9M" secondAttribute="height" id="04F-AS-Jtm"/>
-                                    <constraint firstItem="F6d-t7-G2i" firstAttribute="leading" secondItem="fFM-X5-875" secondAttribute="leading" id="2ic-jh-tdX"/>
-                                    <constraint firstAttribute="trailing" secondItem="F6d-t7-G2i" secondAttribute="trailing" id="4Yc-QJ-uSL"/>
-                                    <constraint firstAttribute="trailing" secondItem="lgd-oT-U9M" secondAttribute="trailing" id="7fV-QH-VJ2"/>
-                                    <constraint firstItem="lgd-oT-U9M" firstAttribute="top" secondItem="fFM-X5-875" secondAttribute="top" id="BKB-Sx-8ig"/>
-                                    <constraint firstItem="lgd-oT-U9M" firstAttribute="leading" secondItem="fFM-X5-875" secondAttribute="leading" id="EZv-jA-fKs"/>
-                                    <constraint firstAttribute="bottom" secondItem="F6d-t7-G2i" secondAttribute="bottom" id="ROi-xk-cA0"/>
-                                    <constraint firstAttribute="width" constant="334" id="kVx-Sa-IOn"/>
-                                </constraints>
-                            </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="0.0" maxValue="362" translatesAutoresizingMaskIntoConstraints="NO" id="ZzB-1x-174">
-                                <rect key="frame" x="76" y="340" width="596" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="592" id="dgc-Ox-Z7E"/>
-                                </constraints>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="0.0" maxValue="362" translatesAutoresizingMaskIntoConstraints="NO" id="lgd-oT-U9M">
+                                <rect key="frame" x="-2" y="656" width="338" height="81"/>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="0.0" maxValue="362" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-sy-ZDS">
-                                <rect key="frame" x="36" y="340" width="596" height="41"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="-40" maxValue="592" translatesAutoresizingMaskIntoConstraints="NO" id="ZzB-1x-174">
+                                <rect key="frame" x="38" y="380" width="676" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="672" id="dgc-Ox-Z7E"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="190" minValue="0.0" maxValue="592" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-sy-ZDS">
+                                <rect key="frame" x="36" y="340" width="596" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="592" id="gq4-u1-ZR9"/>
                                 </constraints>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3Z-3X-tJ6">
+                                <rect key="frame" x="334" y="656" width="80" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lid-fz-2rS">
+                                        <rect key="frame" x="25" y="25" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Set"/>
+                                        <connections>
+                                            <action selector="setButtonPressed:" destination="H2W-Md-Dfp" eventType="touchUpInside" id="0wP-nd-ScN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3DT-xX-Qbu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zN6-f8-iqI" firstAttribute="bottom" secondItem="fFM-X5-875" secondAttribute="bottom" id="P6F-Bl-cLV"/>
+                            <constraint firstItem="lgd-oT-U9M" firstAttribute="bottom" secondItem="zN6-f8-iqI" secondAttribute="bottom" id="BpB-8n-N4V"/>
+                            <constraint firstItem="zN6-f8-iqI" firstAttribute="trailing" secondItem="lgd-oT-U9M" secondAttribute="trailing" constant="80" id="DxQ-2h-od3"/>
+                            <constraint firstItem="lgd-oT-U9M" firstAttribute="top" secondItem="jq3-Aq-YnF" secondAttribute="bottom" id="GI0-xK-IDw"/>
+                            <constraint firstItem="D3Z-3X-tJ6" firstAttribute="bottom" secondItem="zN6-f8-iqI" secondAttribute="bottom" id="GRB-h1-F7W"/>
                             <constraint firstItem="tAa-sy-ZDS" firstAttribute="leading" secondItem="zN6-f8-iqI" secondAttribute="leading" constant="38" id="SxE-X5-nMf"/>
-                            <constraint firstItem="fFM-X5-875" firstAttribute="leading" secondItem="zN6-f8-iqI" secondAttribute="leading" id="TYI-1r-4bU"/>
                             <constraint firstItem="zN6-f8-iqI" firstAttribute="bottom" secondItem="jq3-Aq-YnF" secondAttribute="bottom" constant="80" id="crb-iT-gKt"/>
                             <constraint firstItem="jq3-Aq-YnF" firstAttribute="leading" secondItem="zN6-f8-iqI" secondAttribute="leading" id="dVc-7L-9Xa"/>
                             <constraint firstItem="tAa-sy-ZDS" firstAttribute="top" secondItem="zN6-f8-iqI" secondAttribute="top" constant="276" id="eXK-Ag-HF2"/>
-                            <constraint firstItem="ZzB-1x-174" firstAttribute="top" secondItem="zN6-f8-iqI" secondAttribute="top" constant="276" id="exz-fA-jWh"/>
-                            <constraint firstItem="fFM-X5-875" firstAttribute="top" secondItem="jq3-Aq-YnF" secondAttribute="bottom" id="i9e-WQ-2wg"/>
-                            <constraint firstItem="fFM-X5-875" firstAttribute="top" secondItem="ZzB-1x-174" secondAttribute="bottom" constant="276" id="qPC-Is-xmQ"/>
+                            <constraint firstItem="ZzB-1x-174" firstAttribute="top" secondItem="zN6-f8-iqI" secondAttribute="top" constant="316" id="exz-fA-jWh"/>
+                            <constraint firstItem="D3Z-3X-tJ6" firstAttribute="trailing" secondItem="zN6-f8-iqI" secondAttribute="trailing" id="sp7-8p-dQg"/>
                             <constraint firstItem="zN6-f8-iqI" firstAttribute="trailing" secondItem="jq3-Aq-YnF" secondAttribute="trailing" constant="80" id="tbD-rw-wrM"/>
-                            <constraint firstItem="fFM-X5-875" firstAttribute="top" secondItem="tAa-sy-ZDS" secondAttribute="bottom" constant="276" id="vfu-LU-ajr"/>
+                            <constraint firstItem="lgd-oT-U9M" firstAttribute="leading" secondItem="zN6-f8-iqI" secondAttribute="leading" id="wjS-lc-n0g"/>
+                            <constraint firstItem="D3Z-3X-tJ6" firstAttribute="leading" secondItem="lgd-oT-U9M" secondAttribute="trailing" id="xyI-DG-dMd"/>
                             <constraint firstItem="jq3-Aq-YnF" firstAttribute="top" secondItem="zN6-f8-iqI" secondAttribute="top" id="zKd-5p-v38"/>
-                            <constraint firstItem="ZzB-1x-174" firstAttribute="leading" secondItem="zN6-f8-iqI" secondAttribute="leading" constant="78" id="zdM-20-bGP"/>
+                            <constraint firstItem="ZzB-1x-174" firstAttribute="leading" secondItem="zN6-f8-iqI" secondAttribute="leading" constant="40" id="zdM-20-bGP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zN6-f8-iqI"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="jq3-Aq-YnF" id="rDo-DS-fNe"/>
                         <outlet property="xSlider" destination="lgd-oT-U9M" id="DCM-m8-mUG"/>
-                        <outlet property="xSlider2" destination="F6d-t7-G2i" id="jqr-Vx-LWe"/>
                         <outlet property="ySlider" destination="tAa-sy-ZDS" id="SCX-mA-gHo"/>
                         <outlet property="ySlider2" destination="ZzB-1x-174" id="ftV-aB-6PN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcJ-49-Bk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3660.8695652173915" y="-294.29347826086956"/>
+            <point key="canvasLocation" x="3636" y="-863"/>
         </scene>
         <!--Contact Table View Controller-->
         <scene sceneID="wCa-pw-Jle">
@@ -553,6 +555,6 @@
         <image name="LoginButton" width="238" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uEw-fW-Oxh"/>
+        <segue reference="a5s-fX-2B8"/>
     </inferredMetricsTieBreakers>
 </document>

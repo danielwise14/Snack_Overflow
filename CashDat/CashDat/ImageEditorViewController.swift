@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class ImageEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var xSlider: UISlider!
-    @IBOutlet weak var xSlider2: UISlider!
     @IBOutlet weak var ySlider: UISlider!{
         didSet{
             ySlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
@@ -30,6 +30,8 @@ class ImageEditorViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
+        
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
             imagePicker.sourceType = UIImagePickerController.SourceType.camera
@@ -37,22 +39,32 @@ class ImageEditorViewController: UIViewController, UIImagePickerControllerDelega
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
         // Do any additional setup after loading the view.
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.chosenImage = selectedImage
+            imageView.image = selectedImage
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
+   
+    
+    @IBAction func setButtonPressed(_ sender: Any) {
+        let data = Data()
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let receiptRef = storageRef.child("images/IMG_0007.JPG")
+        let uploadTask = receiptRef.putData(data, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
+            }
+        //this chunk doesn't quite work, but should upload the photo with the coordinates as sliders
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
-
+    
+}
 }
