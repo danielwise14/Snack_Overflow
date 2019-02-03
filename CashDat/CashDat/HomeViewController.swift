@@ -13,9 +13,12 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     @IBAction func logOutAction(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -29,6 +32,12 @@ class HomeViewController: UIViewController {
         UIApplication.shared.keyWindow?.rootViewController = initial
     }
 
+
+    
+    @IBAction func newTransactionPressed(_ sender: Any) {
+        performSegue(withIdentifier: "homeToEditor", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

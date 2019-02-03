@@ -15,6 +15,7 @@ class ContactCell: UITableViewCell {
     @IBOutlet weak var cellBalanceLabel: UILabel!
     @IBOutlet weak var cellNameLabel: UILabel!
     
+    var cellEmail : String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
