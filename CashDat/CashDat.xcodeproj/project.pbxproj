@@ -22,6 +22,9 @@
 		3215929322065D0800F999C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3215929222065D0800F999C9 /* GoogleService-Info.plist */; };
 		321592962206860000F999C9 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321592952206860000F999C9 /* ContactDetailViewController.swift */; };
 		3215929D2206DAFF00F999C9 /* ImageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */; };
+		321C4E7A2207412A00F69078 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C4E792207412A00F69078 /* TransactionTableViewController.swift */; };
+		321C4E7D2207416F00F69078 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C4E7B2207416F00F69078 /* TransactionTableViewCell.swift */; };
+		321C4E7E2207416F00F69078 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321C4E7C2207416F00F69078 /* TransactionTableViewCell.xib */; };
 		D67923C1A45EE91FBDE1CB4B /* Pods_CashDat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA01C17EEBE48DE5015D5C /* Pods_CashDat.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,9 @@
 		3215929222065D0800F999C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		321592952206860000F999C9 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = /Users/danielwise/Desktop/projects/CashDat/CashDat/CashDat/ContactDetailViewController.swift; sourceTree = "<absolute>"; };
 		3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditorViewController.swift; sourceTree = "<group>"; };
+		321C4E792207412A00F69078 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
+		321C4E7B2207416F00F69078 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		321C4E7C2207416F00F69078 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		33512A52B1CCCF6778729FF7 /* Pods-CashDat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashDat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CashDat/Pods-CashDat.release.xcconfig"; sourceTree = "<group>"; };
 		D5883097E2C6F8F01857E3CF /* Pods-CashDat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashDat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CashDat/Pods-CashDat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +91,7 @@
 				321592692206324A00F999C9 /* AppDelegate.swift */,
 				32159294220685CD00F999C9 /* ContactPage */,
 				3215928C220659E000F999C9 /* HomeViewController.swift */,
+				321C4E782207410A00F69078 /* Transaction View */,
 				3215928B2206599D00F999C9 /* LoginSignup */,
 				3215926D2206324A00F999C9 /* Main.storyboard */,
 				3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */,
@@ -115,6 +122,16 @@
 				3215927F2206381800F999C9 /* ContactTableViewController.swift */,
 			);
 			path = ContactPage;
+			sourceTree = "<group>";
+		};
+		321C4E782207410A00F69078 /* Transaction View */ = {
+			isa = PBXGroup;
+			children = (
+				321C4E792207412A00F69078 /* TransactionTableViewController.swift */,
+				321C4E7B2207416F00F69078 /* TransactionTableViewCell.swift */,
+				321C4E7C2207416F00F69078 /* TransactionTableViewCell.xib */,
+			);
+			path = "Transaction View";
 			sourceTree = "<group>";
 		};
 		47CF93FFEBC51D27FA0E0398 /* Pods */ = {
@@ -198,6 +215,7 @@
 				321592742206324D00F999C9 /* LaunchScreen.storyboard in Resources */,
 				321592712206324D00F999C9 /* Assets.xcassets in Resources */,
 				3215929322065D0800F999C9 /* GoogleService-Info.plist in Resources */,
+				321C4E7E2207416F00F69078 /* TransactionTableViewCell.xib in Resources */,
 				3215926F2206324A00F999C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +288,9 @@
 				3215929D2206DAFF00F999C9 /* ImageEditorViewController.swift in Sources */,
 				3215926A2206324A00F999C9 /* AppDelegate.swift in Sources */,
 				3215928A2206599400F999C9 /* LoginViewController.swift in Sources */,
+				321C4E7A2207412A00F69078 /* TransactionTableViewController.swift in Sources */,
 				321592802206381800F999C9 /* ContactTableViewController.swift in Sources */,
+				321C4E7D2207416F00F69078 /* TransactionTableViewCell.swift in Sources */,
 				3215928D220659E000F999C9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

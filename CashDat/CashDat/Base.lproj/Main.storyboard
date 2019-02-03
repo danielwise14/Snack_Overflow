@@ -298,6 +298,68 @@
             </objects>
             <point key="canvasLocation" x="2836.2318840579715" y="23.64130434782609"/>
         </scene>
+        <!--Transaction Table View Controller-->
+        <scene sceneID="RQd-mK-WEG">
+            <objects>
+                <viewController id="s5z-Jf-en5" customClass="TransactionTableViewController" customModule="CashDat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R3U-IJ-h1i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uRj-EF-kfE" userLabel="BackgroundImage">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyL-R5-qhM" userLabel="ContactBalancesLabel">
+                                <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5xQ-sW-eMi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-0c-pPO">
+                                <rect key="frame" x="20" y="70" width="374" height="666"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="57" id="Pax-70-X1K" customClass="TransactionTableViewCell" customModule="CashDat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pax-70-X1K" id="4pd-jT-WvQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="56.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qyL-R5-qhM" firstAttribute="trailing" secondItem="oSt-mH-r8x" secondAttribute="trailing" id="5wP-hG-KHx"/>
+                            <constraint firstItem="uRj-EF-kfE" firstAttribute="leading" secondItem="oSt-mH-r8x" secondAttribute="leading" id="DO6-eK-QDa"/>
+                            <constraint firstItem="OnD-0c-pPO" firstAttribute="top" secondItem="qyL-R5-qhM" secondAttribute="bottom" id="Jn8-Se-2S9"/>
+                            <constraint firstItem="qyL-R5-qhM" firstAttribute="leading" secondItem="oSt-mH-r8x" secondAttribute="leading" id="K9A-EA-3vI"/>
+                            <constraint firstItem="qyL-R5-qhM" firstAttribute="top" secondItem="oSt-mH-r8x" secondAttribute="top" id="Oau-bM-JH0"/>
+                            <constraint firstItem="uRj-EF-kfE" firstAttribute="top" secondItem="R3U-IJ-h1i" secondAttribute="top" id="P2C-Hq-Y8H"/>
+                            <constraint firstItem="uRj-EF-kfE" firstAttribute="trailing" secondItem="oSt-mH-r8x" secondAttribute="trailing" id="cR6-9Q-oj9"/>
+                            <constraint firstItem="uRj-EF-kfE" firstAttribute="bottom" secondItem="oSt-mH-r8x" secondAttribute="bottom" id="fkx-KX-oTo"/>
+                            <constraint firstItem="OnD-0c-pPO" firstAttribute="leading" secondItem="R3U-IJ-h1i" secondAttribute="leadingMargin" id="hnV-j7-n42"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OnD-0c-pPO" secondAttribute="trailing" id="li7-n1-dQO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="OnD-0c-pPO" secondAttribute="bottom" id="x9r-Rd-Hha"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oSt-mH-r8x"/>
+                    </view>
+                    <connections>
+                        <outlet property="ContactTableView" destination="OnD-0c-pPO" id="Jd2-G0-u69"/>
+                        <outlet property="backgroundImage" destination="uRj-EF-kfE" id="pL4-Ke-rL7"/>
+                        <outlet property="contactTableView" destination="OnD-0c-pPO" id="Qer-6M-psi"/>
+                        <outlet property="transactionTableView" destination="OnD-0c-pPO" id="5kg-rY-v47"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y47-ZP-EcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3681" y="-208"/>
+        </scene>
         <!--Image Editor View Controller-->
         <scene sceneID="bKp-jX-Q5E">
             <objects>
