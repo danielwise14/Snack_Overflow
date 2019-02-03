@@ -1,0 +1,6 @@
+framework module Pods_CashDat {
+  umbrella header "Pods-CashDat-umbrella.h"
+
+  export *
+  module * { export * }
+}
