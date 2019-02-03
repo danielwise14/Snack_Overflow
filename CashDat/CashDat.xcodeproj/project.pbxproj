@@ -21,6 +21,7 @@
 		3215929122065A0600F999C9 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215929022065A0600F999C9 /* StartViewController.swift */; };
 		3215929322065D0800F999C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3215929222065D0800F999C9 /* GoogleService-Info.plist */; };
 		321592962206860000F999C9 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321592952206860000F999C9 /* ContactDetailViewController.swift */; };
+		3215929D2206DAFF00F999C9 /* ImageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */; };
 		D67923C1A45EE91FBDE1CB4B /* Pods_CashDat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA01C17EEBE48DE5015D5C /* Pods_CashDat.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		3215929022065A0600F999C9 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3215929222065D0800F999C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		321592952206860000F999C9 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = /Users/danielwise/Desktop/projects/CashDat/CashDat/CashDat/ContactDetailViewController.swift; sourceTree = "<absolute>"; };
+		3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditorViewController.swift; sourceTree = "<group>"; };
 		33512A52B1CCCF6778729FF7 /* Pods-CashDat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashDat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CashDat/Pods-CashDat.release.xcconfig"; sourceTree = "<group>"; };
 		D5883097E2C6F8F01857E3CF /* Pods-CashDat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashDat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CashDat/Pods-CashDat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				3215928C220659E000F999C9 /* HomeViewController.swift */,
 				3215928B2206599D00F999C9 /* LoginSignup */,
 				3215926D2206324A00F999C9 /* Main.storyboard */,
+				3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */,
 				321592702206324D00F999C9 /* Assets.xcassets */,
 				321592722206324D00F999C9 /* LaunchScreen.storyboard */,
 				321592752206324D00F999C9 /* Info.plist */,
@@ -264,6 +267,7 @@
 				3215928F220659ED00F999C9 /* SignupViewController.swift in Sources */,
 				3215926C2206324A00F999C9 /* ViewController.swift in Sources */,
 				321592962206860000F999C9 /* ContactDetailViewController.swift in Sources */,
+				3215929D2206DAFF00F999C9 /* ImageEditorViewController.swift in Sources */,
 				3215926A2206324A00F999C9 /* AppDelegate.swift in Sources */,
 				3215928A2206599400F999C9 /* LoginViewController.swift in Sources */,
 				321592802206381800F999C9 /* ContactTableViewController.swift in Sources */,
