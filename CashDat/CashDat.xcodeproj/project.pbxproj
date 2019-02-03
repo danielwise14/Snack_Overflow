@@ -22,6 +22,7 @@
 		3215929322065D0800F999C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3215929222065D0800F999C9 /* GoogleService-Info.plist */; };
 		321592962206860000F999C9 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321592952206860000F999C9 /* ContactDetailViewController.swift */; };
 		3215929D2206DAFF00F999C9 /* ImageEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */; };
+		6A2E57CF22073F7C0073CAD2 /* SF Pro in Resources */ = {isa = PBXBuildFile; fileRef = 6A2E57CE22073F7C0073CAD2 /* SF Pro */; };
 		D67923C1A45EE91FBDE1CB4B /* Pods_CashDat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA01C17EEBE48DE5015D5C /* Pods_CashDat.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		321592952206860000F999C9 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactDetailViewController.swift; path = /Users/danielwise/Desktop/projects/CashDat/CashDat/CashDat/ContactDetailViewController.swift; sourceTree = "<absolute>"; };
 		3215929C2206DAFF00F999C9 /* ImageEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditorViewController.swift; sourceTree = "<group>"; };
 		33512A52B1CCCF6778729FF7 /* Pods-CashDat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashDat.release.xcconfig"; path = "Pods/Target Support Files/Pods-CashDat/Pods-CashDat.release.xcconfig"; sourceTree = "<group>"; };
+		6A2E57CE22073F7C0073CAD2 /* SF Pro */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "SF Pro"; path = "../../../Desktop/SF Pro"; sourceTree = "<group>"; };
 		D5883097E2C6F8F01857E3CF /* Pods-CashDat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashDat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CashDat/Pods-CashDat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 		3215925D2206324A00F999C9 = {
 			isa = PBXGroup;
 			children = (
+				6A2E57CE22073F7C0073CAD2 /* SF Pro */,
 				321592682206324A00F999C9 /* CashDat */,
 				321592672206324A00F999C9 /* Products */,
 				47CF93FFEBC51D27FA0E0398 /* Pods */,
@@ -198,6 +201,7 @@
 				321592742206324D00F999C9 /* LaunchScreen.storyboard in Resources */,
 				321592712206324D00F999C9 /* Assets.xcassets in Resources */,
 				3215929322065D0800F999C9 /* GoogleService-Info.plist in Resources */,
+				6A2E57CF22073F7C0073CAD2 /* SF Pro in Resources */,
 				3215926F2206324A00F999C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
