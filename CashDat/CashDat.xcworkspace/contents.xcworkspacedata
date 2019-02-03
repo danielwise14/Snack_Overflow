@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/danielwise/Desktop/projects/CashDat/CashDat/CashDat/ContactDetailViewController.swift">
+      location = "group:../../../Desktop/SF Pro">
    </FileRef>
    <FileRef
       location = "group:CashDat.xcodeproj">
