@@ -15,6 +15,7 @@ CashDat is an application available on the iOS platform that allows users to kee
   <img src="https://github.com/danielwise14/Snack_Overflow/raw/master/img5.png">
  <img src="https://github.com/danielwise14/Snack_Overflow/raw/master/img6.png">
 </p>
+
 ## How we built it?
 We used Python and Optical Character Recognition (OCR) built inside Google Cloud Vision API to implement text extraction using AI on the cloud. This was used specifically to draw item names and prices from the scanned receipts.
 
